@@ -1,10 +1,12 @@
 import './App.css'
-import RefDom from './components/RefDom'
+// import RefDom from './components/RefDom'
+import SimpleForm from './components/SimpleForm'
 
 function App () {
   return (
     <div className='App'>
-      <RefDom />
+      {/* <RefDom /> */}
+      <SimpleForm />
     </div>
   )
 }
