@@ -20,8 +20,8 @@ const SimpleForm = () => {
         <img src={logo} alt='logo' className='logo' width='200px' height='200px' />
         <form onSubmit={handleSubmit}>
           {/* Paso 3: Guardar cada cambio del input en su estado */}
-          <label htmlFor='email'>Emial</label>
-          <input type='text' name='email' placeholder='correo@correo.com' id='emial' onChange={(event) => { setEmail(event.target.value) }} />
+          <label htmlFor='email'>Email</label>
+          <input type='text' name='email' placeholder='correo@correo.com' id='email' onChange={(event) => { setEmail(event.target.value) }} />
           <label htmlFor='password'>Password</label>
           <input type='password' name='password' placeholder='password' id='password' onChange={(event) => { setPassword(event.target.value) }} />
           <button onClick={handleSubmit}>Iniciar Sesión</button>
