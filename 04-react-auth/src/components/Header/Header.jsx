@@ -2,15 +2,19 @@ import { useContext } from 'react'
 import { AuthContext } from '@/context/AuthContext'
 import './header.scss'
 import { Link } from 'react-router-dom'
-
 const Header = () => {
   const { isAuth, logout } = useContext(AuthContext)
-
   return (
-    <>
-      <nav className='header'>
-        <Link to='/' className='header__logo'>LOGO</Link>
-        <ul className='header__nav-list'>
+    <nav className='header'>
+      <Link to='/' className='header__logo'>LOGO</Link>
+      <ul className='header__nav-list'>
+        <>
+          <li className='header__list-item'>
+            <Link to='/' className='header__item-link'>Home</Link>
+          </li>
+          <li className='header__list-item'>
+            <Link to='/dashboard' className='header__item-link'>Dashboard</Link>
+          </li>
           {
           !isAuth
             ? (
@@ -32,12 +36,12 @@ const Header = () => {
                   <Link to='/' className='header__item-link  header__item-link--is-active' onClick={logout}>Logout</Link>
                 </li>
               </>
+
               )
         }
-        </ul>
-      </nav>
-    </>
+        </>
+      </ul>
+    </nav>
   )
 }
-
 export default Header
