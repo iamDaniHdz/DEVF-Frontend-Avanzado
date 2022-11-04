@@ -8,6 +8,7 @@ const Signup = () => {
   const navigate = useNavigate()
 
   const sendData = async (data) => {
+    console.log(data)
     try {
       const result = await registerUserServices(data)
       if (result.status === 200) {
@@ -93,7 +94,7 @@ const Signup = () => {
         </div>
 
         <button className='w-100 btn btn-lg btn-primary' type='submit'>
-          Sign in
+          Sign Up
         </button>
         <p className='mt-5 mb-3 text-muted'>© 2017–2022</p>
       </form>
