@@ -17,5 +17,6 @@ const getSingleUser = (id) => axios.get(`${BASE_URL}/user/${id}`, config)
 export {
   registerUserServices,
   loginUserServices,
-  getSingleUser
+  getSingleUser,
+  BASE_URL
 }
