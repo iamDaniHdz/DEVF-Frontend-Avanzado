@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '@/services/userServices'
 import { AuthContext } from '@/context/AuthContext'
+import '@/assets/css/index.css'
 
 const Home = () => {
   const [items, setItems] = useState([])
@@ -22,8 +23,8 @@ const Home = () => {
   return (
     <>
       <div className='container'>
-        <h2>Todas las categorías</h2>
-        <div className='bg-primary row justify-content-center'>
+        <h2 className='fw-normal mt-3'>Todas las categorías</h2>
+        <div className='row justify-content-center'>
           {items.map((item) => {
             return (
               <div key={item._id} className='card m-3 p-2 bg-light' style={{ width: '18rem' }}>
