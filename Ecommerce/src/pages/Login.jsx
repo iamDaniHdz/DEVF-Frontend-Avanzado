@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import logo from '@/assets/react.svg'
 import useForm from '@/hooks/useForm'
 import { useNavigate } from 'react-router-dom'
 import { loginUserServices } from '@/services/userServices'
@@ -29,39 +28,47 @@ const Login = () => {
   })
 
   return (
-    <main className='form-signin w-100 m-auto'>
+    <main>
       <form onSubmit={handleSubmit}>
-        <img src={logo} alt='logo' />
-        <h1 className='h3 mb-3 fw-normal'>Please sign in</h1>
-        <div className='form-floating'>
-          <input
-            type='email'
-            className='form-control'
-            id='floatingEmail'
-            name='email'
-            placeholder='name@example.com'
-            value={input.email}
-            onChange={handleInputChange}
-          />
-          <label htmlFor='floatingEmail'>Email address</label>
-        </div>
-        <div className='form-floating'>
-          <input
-            type='password'
-            className='form-control'
-            id='floatingPassword'
-            name='password'
-            placeholder='Password'
-            value={input.password}
-            onChange={handleInputChange}
-          />
-          <label htmlFor='floatingPassword'>Password</label>
-        </div>
+        <div className='d-flex align-items-center justify-content-evenly container p-3 position-absolute top-50 start-50 translate-middle '>
+          <div className=''>
+            <img className='' src='src/assets/login.svg' alt='' width='350rem' />
+          </div>
+          <div className='bg-light d-flex flex-column p-4 rounded w-25'>
+            <h1 className='h3 mb-3 fw-normal text-center'>Iniciar Sesión</h1>
+            <div className='form-floating m-1'>
+              <input
+                type='email'
+                className='form-control'
+                id='floatingEmail'
+                name='email'
+                placeholder='name@example.com'
+                value={input.email}
+                onChange={handleInputChange}
+              />
+              <label htmlFor='floatingEmail'>Correo electrónico</label>
+            </div>
+            <div className='form-floating m-1'>
+              <input
+                type='password'
+                className='form-control'
+                id='floatingPassword'
+                name='password'
+                placeholder='Password'
+                value={input.password}
+                onChange={handleInputChange}
+              />
+              <label htmlFor='floatingPassword'>Contraseña</label>
+            </div>
 
-        <button className='w-100 btn btn-lg btn-primary' type='submit'>
-          Sign in
-        </button>
-        <p className='mt-5 mb-3 text-muted'>© 2017–2022</p>
+            <button className='btn btn-lg btn-dark m-1' type='submit'>
+              Sign in
+            </button>
+
+            <p className='mt-3'>¿No tienes cuenta? <a href='' className='text-warning'>Regístrate</a></p>
+          </div>
+
+        </div>
       </form>
     </main>
   )
