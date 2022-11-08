@@ -6,7 +6,9 @@ const Header = () => {
   const { isAuth, logout } = useContext(AuthContext)
   return (
     <nav className='header'>
-      <Link to='/' className='header__logo'>LOGO</Link>
+      <Link to='/' className='header__logo'>
+        <img src='src/assets/css/amazon.png' alt='' style={{ width: '5rem' }} />
+      </Link>
       <ul className='header__nav-list'>
         <>
           <li className='header__list-item'>
@@ -20,10 +22,10 @@ const Header = () => {
             ? (
               <>
                 <li className='header__list-item'>
-                  <Link to='/login' className='header__item-link'>Login</Link>
+                  <Link to='/login' className='header__item-link'>Inicia sesión</Link>
                 </li>
                 <li className='header__list-item'>
-                  <Link to='/signup' className='header__item-link'>Signup</Link>
+                  <Link to='/signup' className='header__item-link'>Registrate</Link>
                 </li>
               </>
               )
