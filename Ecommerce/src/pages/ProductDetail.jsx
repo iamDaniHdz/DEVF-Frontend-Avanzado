@@ -5,12 +5,10 @@ import { useContext } from 'react'
 import { AuthContext } from '../context/AuthContext'
 
 const ProductDetail = () => {
-//   const context = useProductContext()
   const { isAuth } = useContext(AuthContext)
   const { id } = useParams()
   const { data } = useGetData(`https://ecomerce-master.herokuapp.com/api/v1/item/${id}`)
   console.log(data)
-  // console.log(context.search)
 
   return (
     <>
@@ -30,8 +28,7 @@ const ProductDetail = () => {
             <button className='btn btn-warning' disabled='true'>Comprar</button>
             <p className=''>Regístrate o inicia sesión para comprar productos</p>
           </>
-          )
-      }
+          )}
     </>
   )
 }
