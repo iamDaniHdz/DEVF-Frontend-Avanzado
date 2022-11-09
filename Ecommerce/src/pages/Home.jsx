@@ -41,7 +41,7 @@ const Home = () => {
           id='valor'
           placeholder='Buscar'
           onChange={buscar}
-          autocomplete='off'
+          autoComplete='off'
           className='form-control text-dark mt-3 mb-2'
         />
         <div className='row justify-content-center'>
