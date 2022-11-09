@@ -1,11 +1,11 @@
-// import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 const Error404 = () => {
-//   const location = useLocation()
+  const location = useLocation()
   return (
     <>
       <h1>Error 404</h1>
-      {/* <p>No encontró la ruta: {location.pathname}</p> */}
+      <p>No encontró la ruta: {location.pathname}</p>
     </>
   )
 }
