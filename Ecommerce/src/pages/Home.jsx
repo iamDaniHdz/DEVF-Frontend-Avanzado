@@ -3,6 +3,7 @@ import axios from 'axios'
 import { BASE_URL } from '@/services/userServices'
 import { AuthContext } from '@/context/AuthContext'
 import '@/assets/css/index.css'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   const [items, setItems] = useState([])
@@ -63,15 +64,9 @@ const Home = () => {
                     <div className='d-flex justify-content-between align-items-center w-100'>
                       <h2 className='fw-light'>${item.price}</h2>
                       {isAuth === true
-                        ? <a className='btn btn-warning'>Comprar</a>
-                        : <a className='btn btn-warning disabled'>Comprar</a>}
+                        ? <Link to={`/${item._id}`}><button className='btn btn-warning'>Comprar</button></Link>
+                        : <Link to='/login'><button className='btn btn-warning disabled'>Comprar</button></Link>}
                     </div>
-                    {/* <p className='card-text'>{item.description}</p> */}
-                    {/* <p>{item.brand}</p> */}
-                    {/* <p>{item.category}</p> */}
-                    {/* <p>{item.description}</p> */}
-                    {/* {item.isActive === true ? <p>Disponible</p> : <p>No disponible</p>} */}
-                    {/* <p>{item.sku}</p> */}
                   </div>
                 </div>
               )
