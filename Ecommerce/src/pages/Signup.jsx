@@ -41,6 +41,7 @@ const Signup = () => {
                 placeholder='John'
                 value={input.first_name}
                 onChange={handleInputChange}
+                required
               />
               <label htmlFor='first_name'>Nombre</label>
             </div>
@@ -54,12 +55,13 @@ const Signup = () => {
                 placeholder='Doe'
                 value={input.last_name}
                 onChange={handleInputChange}
+                required
               />
               <label htmlFor='last_name'>Apellido</label>
             </div>
 
             <div className='form-floating m-1'>
-              <select className='form-select' id='gender' name='gender' value={input.gender} onChange={handleInputChange}>
+              <select className='form-select' id='gender' name='gender' value={input.gender} onChange={handleInputChange} required>
                 <option value=''>Escoge...</option>
                 <option value='M'>Hombre</option>
                 <option value='F'>Mujer</option>
@@ -76,6 +78,7 @@ const Signup = () => {
                 placeholder='name@example.com'
                 value={input.email}
                 onChange={handleInputChange}
+                required
               />
               <label htmlFor='email'>Correo electrónico</label>
             </div>
@@ -89,6 +92,7 @@ const Signup = () => {
                 placeholder='Password'
                 value={input.password}
                 onChange={handleInputChange}
+                required
               />
               <label htmlFor='password'>Contraseña</label>
             </div>
