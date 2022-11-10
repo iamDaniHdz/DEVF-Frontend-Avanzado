@@ -1,5 +1,5 @@
 import useForm from '@/hooks/useForm'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { registerUserServices } from '@/services/userServices'
 import '@/assets/css/form.css'
 
@@ -30,7 +30,7 @@ const Signup = () => {
     <main>
       <form onSubmit={handleSubmit}>
         <div className='d-flex align-items-center justify-content-evenly container p-3'>
-          <div className='bg-light d-flex flex-column p-4 rounded w-25'>
+          <div className='bg-light d-flex flex-column p-4 rounded' style={{ width: '25rem' }}>
             <h1 className='h3 mb-3 fw-normal text-center'>Regístrate</h1>
             <div className='form-floating m-1'>
               <input
@@ -97,7 +97,8 @@ const Signup = () => {
               Registrarse
             </button>
 
-            <p className='mt-3'>¿Ya tienes una cuenta? <a href='' className='text-warning'>Iniciar sesión</a></p>
+            <p className='mt-3 text-center'>¿Ya tienes una cuenta? <Link to='/login'><a className='text-warning'>Inicia sesión</a></Link>
+            </p>
 
           </div>
           <div className=''>

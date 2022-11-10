@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import useForm from '@/hooks/useForm'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { loginUserServices } from '@/services/userServices'
 import { AuthContext } from '@/context/AuthContext'
 import '@/assets/css/form.css'
@@ -62,10 +62,10 @@ const Login = () => {
             </div>
 
             <button className='btn btn-lg btn-dark m-1' type='submit'>
-              Sign in
+              Login
             </button>
-
-            <p className='mt-3'>¿No tienes cuenta? <a href='' className='text-warning'>Regístrate</a></p>
+            <p className='mt-3'>¿No tienes cuenta? <Link to='/signup'><a className='text-warning'>Regístrate</a></Link>
+            </p>
           </div>
 
         </div>
