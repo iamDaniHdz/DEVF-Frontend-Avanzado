@@ -46,6 +46,9 @@ const Dashboard = () => {
       {
       userData?.email && <p className='email'>Email: {userData.email} </p>
     }
+      {
+      userData?.birth_date && <p className='birth_date'>Cumpleaños: {(userData.birth_date)} </p>
+    }
     </div>
   )
 }
