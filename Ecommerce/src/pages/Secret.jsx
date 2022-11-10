@@ -1,6 +1,6 @@
 const Secret = () => {
   return (
-    <div>Secret</div>
+    <div>Página secreta para el usuario</div>
   )
 }
 
