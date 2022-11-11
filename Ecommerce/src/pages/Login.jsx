@@ -45,6 +45,7 @@ const Login = () => {
                 placeholder='name@example.com'
                 value={input.email}
                 onChange={handleInputChange}
+                required
               />
               <label htmlFor='floatingEmail'>Correo electrónico</label>
             </div>
@@ -57,10 +58,10 @@ const Login = () => {
                 placeholder='Password'
                 value={input.password}
                 onChange={handleInputChange}
+                required
               />
               <label htmlFor='floatingPassword'>Contraseña</label>
             </div>
-
             <button className='btn btn-lg btn-dark m-1' type='submit'>
               Login
             </button>
